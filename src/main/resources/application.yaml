@@ -1,5 +1,35 @@
 spring:
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-      - org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
+  application:
+    name: ranger-clickhouse-sync
+ranger:
+  url: <url>
+  username: <username>
+  password: <password>
+  service-name: <service-name>
+  policies-endpoint: /service/public/v2/api/service/{serviceName}/policy
+  sync:
+    interval-ms: 60000
+  audit:
+    repo-type: <repo-type>
+    sync:
+      interval-ms: 60000
+
+clickhouse:
+  url: <url>
+  username: <username>
+  password: <password>
+
+postgres:
+  url: <url>
+  username: <username>
+  password: <password>
+
+quickwit:
+  url: <url>
+  index: ranger_audits
+  index-endpoint: /api/v1/indexes
+  ingest-endpoint: /api/v1/{index}/ingest
+
+logging:
+  level:
+    io.github.esipovmatvey.rangerclickhousesync: DEBUG

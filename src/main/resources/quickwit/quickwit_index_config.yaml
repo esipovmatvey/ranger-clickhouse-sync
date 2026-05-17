@@ -1,0 +1,222 @@
+version: 0.7
+index_id: %s
+doc_mapping:
+  field_mappings:
+    - name: id
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: access
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: action
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: agent
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: agentHost
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: cliIP
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: cluster
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: enforcer
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: evtTime
+      type: datetime
+      fast: true
+      fast_precision: milliseconds
+      indexed: true
+      input_formats: [ iso8601, rfc3339 ]
+      output_format: iso8601
+      stored: true
+    - name: logType
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: policy
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: reason
+      type: text
+      fast: false
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: default
+    - name: repo
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: repoType
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: reqData
+      type: text
+      fast: false
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: default
+    - name: reqUser
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: resType
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: resource
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: result
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: seq_num
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: sess
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: event_count
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: event_dur_ms
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+    - name: tags
+      type: text
+      fast: false
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: zoneName
+      type: text
+      fast: { normalizer: raw }
+      fieldnorms: false
+      indexed: true
+      record: basic
+      stored: true
+      tokenizer: raw
+    - name: policyVersion
+      type: i64
+      coerce: true
+      fast: true
+      indexed: true
+      output_format: number
+      stored: true
+  tag_fields: [ ]
+  store_source: false
+  index_field_presence: false
+  timestamp_field: evtTime
+  mode: dynamic
+  dynamic_mapping:
+    indexed: true
+    tokenizer: raw
+    record: basic
+    stored: true
+    expand_dots: true
+    fast:
+      normalizer: raw
+  max_num_partitions: 200
+  tokenizers: [ ]
+indexing_settings:
+  commit_timeout_secs: 30
