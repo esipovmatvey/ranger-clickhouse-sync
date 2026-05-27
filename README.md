@@ -60,4 +60,4 @@ quickwit:
 
 - Убедитесь, что конфигурация в application.yml заполнена корректно.
 - Выполните сборку проекта: `mvn clean install -DskipTests`
-- Запустите приложение: `java -jar target/ranger-clickhouse-sync-0.1.jar`
+- Запустите приложение: `java -jar <путь до jar>`

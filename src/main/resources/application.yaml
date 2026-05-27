@@ -32,4 +32,4 @@ quickwit:
 
 logging:
   level:
-    io.github.esipovmatvey.rangerclickhousesync: DEBUG
+   rangerclickhousesync: DEBUG

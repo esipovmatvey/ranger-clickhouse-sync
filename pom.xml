@@ -7,7 +7,7 @@
 
     <groupId>esipovmatvey</groupId>
     <artifactId>ranger-clickhouse-sync</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <name>ranger-clickhouse-sync</name>
 
     <parent>
